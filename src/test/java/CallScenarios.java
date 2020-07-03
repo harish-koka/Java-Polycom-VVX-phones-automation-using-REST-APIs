@@ -12,7 +12,7 @@ public class CallScenarios {
 
      public void placeCall(String dutIP, String destIP) throws UnirestException {
          //Unirest.setTimeouts(0, 0);
-         response = Unirest.post("http://10.221.26.173/api/v1/callctrl/dial")
+         response = Unirest.post("http://"+dutIP+"/api/v1/callctrl/dial")
                 .header("Authorization", "Basic UG9seWNvbTo3Nzc=")
                 .header("Content-Type", "application/json")
                 .body("{\"data\":{\"Dest\":\"" +
